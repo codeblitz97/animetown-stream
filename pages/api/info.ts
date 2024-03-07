@@ -3,6 +3,12 @@ import { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 import axios, { type AxiosError, isAxiosError } from 'axios';
 import { getRandom } from 'random-useragent';
 
+export const config = {
+  api: {
+    responseLimit: false,
+  },
+};
+
 const info: NextApiHandler = async (
   req: NextApiRequest,
   res: NextApiResponse

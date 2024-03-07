@@ -3,6 +3,12 @@ import { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 import axios, { AxiosError, isAxiosError } from 'axios';
 import { getRandom } from 'random-useragent';
 
+export const config = {
+  api: {
+    responseLimit: false,
+  },
+};
+
 const trending: NextApiHandler = async (
   req: NextApiRequest,
   res: NextApiResponse
