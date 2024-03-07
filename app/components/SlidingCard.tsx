@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Mousewheel } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { AnimeData, AnimeResult } from '@/utils/types';
 import Image from 'next/image';
 import 'swiper/css';
@@ -91,9 +91,8 @@ export default function SlidingCard({ animeList }: Readonly<Props>) {
   return (
     <div>
       <Swiper
-        modules={[Navigation, Mousewheel]}
+        modules={[Navigation]}
         spaceBetween={20}
-        mousewheel={true}
         slidesPerView={1}
         navigation={true}
         breakpoints={{
